@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ASUS\\Desktop\\LoginRegister-Project\\LoginRegister-Project\\LoginRegister-Project.csproj": {}
+    "C:\\Users\\ASUS\\Desktop\\LoginRegisterProject\\LoginRegisterProject\\LoginRegister-Project\\LoginRegister-Project\\LoginRegister-Project.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ASUS\\Desktop\\LoginRegister-Project\\LoginRegister-Project\\LoginRegister-Project.csproj": {
+    "C:\\Users\\ASUS\\Desktop\\LoginRegisterProject\\LoginRegisterProject\\LoginRegister-Project\\LoginRegister-Project\\LoginRegister-Project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\LoginRegister-Project\\LoginRegister-Project\\LoginRegister-Project.csproj",
+        "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\LoginRegisterProject\\LoginRegisterProject\\LoginRegister-Project\\LoginRegister-Project\\LoginRegister-Project.csproj",
         "projectName": "LoginRegister-Project",
-        "projectPath": "C:\\Users\\ASUS\\Desktop\\LoginRegister-Project\\LoginRegister-Project\\LoginRegister-Project.csproj",
+        "projectPath": "C:\\Users\\ASUS\\Desktop\\LoginRegisterProject\\LoginRegisterProject\\LoginRegister-Project\\LoginRegister-Project\\LoginRegister-Project.csproj",
         "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ASUS\\Desktop\\LoginRegister-Project\\LoginRegister-Project\\obj\\",
+        "outputPath": "C:\\Users\\ASUS\\Desktop\\LoginRegisterProject\\LoginRegisterProject\\LoginRegister-Project\\LoginRegister-Project\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",

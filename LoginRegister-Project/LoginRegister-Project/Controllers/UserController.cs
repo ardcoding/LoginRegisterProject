@@ -1,5 +1,5 @@
-﻿using LoginRegister_Project.IService;
-using LoginRegister_Project.Models;
+﻿using LoginRegister_Project.Domain.Interface;
+using LoginRegister_Project.Domain.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;

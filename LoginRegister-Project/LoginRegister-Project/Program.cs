@@ -1,6 +1,6 @@
-using LoginRegister_Project.IService;
-using LoginRegister_Project.Service;
-using LoginRegister_Project.Models;
+using LoginRegister_Project.Domain.Models;
+using LoginRegister_Project.Domain.Service;
+using LoginRegister_Project.Domain.Interface;
 
 var builder = WebApplication.CreateBuilder(args);
 

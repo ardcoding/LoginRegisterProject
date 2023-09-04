@@ -1,4 +1,4 @@
-﻿using LoginRegister_Project.Models;
+﻿using LoginRegister_Project.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 

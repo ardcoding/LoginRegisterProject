@@ -1,5 +1,5 @@
-﻿using LoginRegister_Project.IService;
-using LoginRegister_Project.Models;
+﻿using LoginRegister_Project.Domain.Models;
+using LoginRegister_Project.IService;
 using Microsoft.EntityFrameworkCore;
 
 namespace LoginRegister_Project.Service
