@@ -1,4 +1,4 @@
-﻿namespace LoginRegister_Project.Models
+﻿namespace LoginRegister_Project.Domain.Models
 {
     public class ApiResponse<T>
     {

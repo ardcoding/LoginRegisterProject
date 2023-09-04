@@ -1,5 +1,5 @@
 using LoginRegister_Project.Domain.Models;
-using LoginRegister_Project.Domain.Service;
+using LoginRegister_Project.Domain.Services;
 using LoginRegister_Project.Domain.Interface;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,7 +11,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<UserDbContext>();
-builder.Services.AddScoped<IGenericService<User>, Service<User>>();
+builder.Services.AddScoped<IGenericService<User>, UserService>();
 
 var app = builder.Build();
 

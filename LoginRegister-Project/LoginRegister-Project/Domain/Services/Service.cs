@@ -1,8 +1,8 @@
 ﻿using LoginRegister_Project.Domain.Models;
-using LoginRegister_Project.IService;
+using LoginRegister_Project.Domain.Interface;
 using Microsoft.EntityFrameworkCore;
 
-namespace LoginRegister_Project.Service
+namespace LoginRegister_Project.Domain.Services
 {
     public class Service<T> : IGenericService<T> where T : class
     {
@@ -18,9 +18,22 @@ namespace LoginRegister_Project.Service
             return entity;
         }
 
-        public async Task<T> GetUser(int id)
+        public async Task<List<T>> GetAllUser()
         {
-            return await _dbcontext.Set<T>().FindAsync(id);
+            return await _dbcontext.Set<T>().ToListAsync();
+        }
+
+        public async Task<T> GetUser(string email)
+        {
+            return await _dbcontext.Set<T>().FindAsync(email);
+        }
+
+
+        public async Task DeleteUser(int id)
+        {
+            var deleteUser = await _dbcontext.Set<T>().FindAsync(id);
+            _dbcontext.Set<T>().Remove(deleteUser);
+            await _dbcontext.SaveChangesAsync();
         }
     }
 }

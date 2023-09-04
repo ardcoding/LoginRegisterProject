@@ -1,4 +1,4 @@
-﻿namespace LoginRegister_Project.Models
+﻿namespace LoginRegister_Project.Domain.DTOs
 {
     public class UserDTO
     {

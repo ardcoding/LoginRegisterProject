@@ -1,5 +1,6 @@
 ﻿using LoginRegister_Project.Domain.Interface;
 using LoginRegister_Project.Domain.Models;
+using LoginRegister_Project.Domain.DTOs;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -38,11 +39,13 @@ namespace LoginRegister_Project.Controllers
         }
 
         [HttpPost("login")]
-        public ActionResult<User> Login(LoginDTO request)
+        public async Task<ActionResult<User>> Login(LoginDTO request)
         {
-            if(user.Email==request.Email && BCrypt.Net.BCrypt.Verify(request.Password, user.PasswordHash))
+            var findUser = await _userService.GetUser(request.Email);
+            if (findUser == null) { return NotFound("User Not Found"); }
+            if(findUser.Email==request.Email && BCrypt.Net.BCrypt.Verify(request.Password, findUser.PasswordHash))
             {
-                string token = CreateToken(user);
+                string token = CreateToken(findUser);
                 var response = new ApiResponse<object>
                 {
                     IsSuccess = true,
@@ -64,6 +67,23 @@ namespace LoginRegister_Project.Controllers
                 return BadRequest(errorResponse);
             }
         }
+
+        [HttpGet("GetAllUser")]
+        public async Task<List<User>> GetAllUser()
+        {
+           return await _userService.GetAllUser();
+        }
+
+
+        [HttpGet("GetAllUser/{id}")]
+        public async Task DeleteUser(int id)
+        {
+           await _userService.DeleteUser(id);
+        }
+
+
+
+
         private string CreateToken(User user)
         {
             List<Claim> claims = new List<Claim>
