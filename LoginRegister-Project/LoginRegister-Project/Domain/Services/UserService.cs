@@ -35,5 +35,12 @@ namespace LoginRegister_Project.Domain.Services
             await _dbcontext.SaveChangesAsync();
         }
 
+        public async Task<User> UpdateUser(User user)
+        {
+            _dbcontext.Users.Update(user);
+            await _dbcontext.SaveChangesAsync();
+            return user;
+        }
+
     }
 }

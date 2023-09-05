@@ -8,6 +8,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using Azure.Core;
 
 namespace LoginRegister_Project.Controllers
 {
@@ -43,7 +44,7 @@ namespace LoginRegister_Project.Controllers
         {
             var findUser = await _userService.GetUser(request.Email);
             if (findUser == null) { return NotFound("User Not Found"); }
-            if(findUser.Email==request.Email && BCrypt.Net.BCrypt.Verify(request.Password, findUser.PasswordHash))
+            if (findUser.Email == request.Email && BCrypt.Net.BCrypt.Verify(request.Password, findUser.PasswordHash))
             {
                 string token = CreateToken(findUser);
                 var response = new ApiResponse<object>
@@ -71,16 +72,29 @@ namespace LoginRegister_Project.Controllers
         [HttpGet("GetAllUser")]
         public async Task<List<User>> GetAllUser()
         {
-           return await _userService.GetAllUser();
+            return await _userService.GetAllUser();
         }
 
-
-        [HttpGet("GetAllUser/{id}")]
+        [HttpGet("DeleteUser/{id}")]
         public async Task DeleteUser(int id)
         {
-           await _userService.DeleteUser(id);
+            await _userService.DeleteUser(id);
         }
 
+        [HttpPost("UpdateUser")]
+        public async Task<ActionResult<User>> UpdateUser([FromBody] User request)
+        {
+            string passwordHash = BCrypt.Net.BCrypt.HashPassword(request.PasswordHash);
+            user.Id = request.Id;
+            user.Email = request.Email;
+            user.PasswordHash = passwordHash;
+            user.Phone = request.Phone;
+            user.Name = request.Name;
+            user.LastName = request.LastName;
+
+            await _userService.UpdateUser(user);
+            return Ok(user);
+        }
 
 
 
@@ -88,7 +102,10 @@ namespace LoginRegister_Project.Controllers
         {
             List<Claim> claims = new List<Claim>
                 {
-                    new Claim(ClaimTypes.Name, user.Name)
+                    new Claim(ClaimTypes.Name, user.Name),
+                    new Claim(ClaimTypes.Name, user.LastName),
+                    new Claim(ClaimTypes.Name, user.Email),
+                    new Claim(ClaimTypes.Name, user.Phone)
                 };
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration.GetSection("AppSettings:Token").Value!));
 
