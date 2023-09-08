@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "8b44qL6EtplMm2OooFvKWwfe2Aeo5t3SZbdXMYfL6jcfjutosnOXM8jiTV48NmVy5t8m8SRffn14MXncbeIkLw==",
+  "dgSpecHash": "OS5AXK1eFsR1RwT+PR4L/b7vezXvI3aQ7Nb4ThuMmvmB6TSKaiV3/zA6BpGXJiKkLKkPFqPcva9pioAgBUCBbg==",
   "success": true,
   "projectFilePath": "C:\\Users\\ASUS\\Desktop\\LoginRegisterProject\\LoginRegisterProject\\LoginRegister-Project\\LoginRegister-Project\\LoginRegister-Project.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\ASUS\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\7.0.10\\microsoft.aspnetcore.authentication.jwtbearer.7.0.10.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.9\\microsoft.aspnetcore.openapi.7.0.9.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

@@ -152,3 +152,4 @@ C:\Users\ASUS\Desktop\LoginRegisterProject\LoginRegisterProject\LoginRegister-Pr
 C:\Users\ASUS\Desktop\LoginRegisterProject\LoginRegisterProject\LoginRegister-Project\LoginRegister-Project\obj\Debug\net7.0\LoginRegister-Project.csproj.CopyComplete
 C:\Users\ASUS\Desktop\LoginRegisterProject\LoginRegisterProject\LoginRegister-Project\LoginRegister-Project\obj\Debug\net7.0\LoginRegister-Project.genruntimeconfig.cache
 C:\Users\ASUS\Desktop\LoginRegisterProject\LoginRegisterProject\LoginRegister-Project\LoginRegister-Project\obj\Debug\net7.0\ref\LoginRegister-Project.dll
+C:\Users\ASUS\Desktop\LoginRegisterProject\LoginRegisterProject\LoginRegister-Project\LoginRegister-Project\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

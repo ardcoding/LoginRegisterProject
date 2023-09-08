@@ -1,4 +1,5 @@
-﻿using LoginRegister_Project.Domain.Interface;
+﻿using LoginRegister_Project.Domain.DTOs;
+using LoginRegister_Project.Domain.Interface;
 using LoginRegister_Project.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 
